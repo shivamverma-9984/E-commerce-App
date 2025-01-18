@@ -74,7 +74,7 @@ const Login = ({onLoginSuccess}) => {
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
     // Validate user credentials
-    const user = users[0].find(
+    const user = users.find(
       (user) => user.email === email && user.password === password
     );
 

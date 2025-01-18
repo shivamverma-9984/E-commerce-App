@@ -18,7 +18,7 @@ const  ProductList=({ searchQuery })=> {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 800);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [searchQuery, selectedCategory, sortOrder]);
 

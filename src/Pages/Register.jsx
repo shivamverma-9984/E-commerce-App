@@ -86,7 +86,11 @@ const Register = () => {
     users.push({username, email, password });
     localStorage.setItem('users', JSON.stringify(users));
     toast.success("Register successfull ")
-    navigate('/login')
+
+    setTimeout(()=>{
+      navigate('/login')
+
+    },2000)
     setError('');
     setSuccess('Registration successful!');
     setUsername('');
@@ -104,6 +108,8 @@ const Register = () => {
                     Create an account
                 </h1>
                 <form className="space-y-4 md:space-y-6"  onSubmit={handleRegister}>
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
+
                     <div>
                         <label for="name" className="block mb-1 text-sm font-medium text-gray-900 ">Your Name</label>
                         <input  className="border border-gray-300  text-sm rounded-lg  w-full p-2" type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="UserName" required=""/>

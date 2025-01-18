@@ -24,7 +24,7 @@ const ProductCard=({ id, name, price, image, category })=> {
 else{
     toast.success('Item added successfully')>
     addToCart({ id, name, price, image, quantity: 1 });
-    localStorage.setItem("users", JSON.stringify({ id, name, price, image, quantity: 1 }));
+    // localStorage.setItem("users", JSON.stringify({ id, name, price, image, quantity: 1 }));
 
     }
   };

@@ -57,6 +57,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Login = ({onLoginSuccess}) => {
   const [email, setEmail] = useState('');
@@ -81,7 +82,12 @@ const Login = ({onLoginSuccess}) => {
     if (user) {
       localStorage.setItem('isLoggedIn', 'true'); // Set login state
       setLoading(false);
-      navigate('/'); // Redirect to dashboard
+      toast.success('Login successful')>
+
+      setTimeout(()=>{
+        navigate('/');
+      },2000)
+       // Redirect to dashboard
     } else {
       setLoading(false);
       setError('Invalid email or password');

@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import { Heart, ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'sonner';
+// import { toast } from 'sonner';
 // import { AuthContext } from './../context/AuthContext';
+import toast from 'react-hot-toast';
 
 const ProductCard=({ id, name, price, image, category })=> {
   const { addToCart, cart } = useCart();

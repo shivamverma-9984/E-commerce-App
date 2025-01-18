@@ -61,7 +61,9 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'sonner';
+// import { toast } from 'sonner';
+import toast from 'react-hot-toast';
+
 
 const Register = () => {
   const [username, setUsername] = useState('');
